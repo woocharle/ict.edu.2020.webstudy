@@ -20,7 +20,19 @@
 
    (3) Tomcat
 	
-	1) 쓰는 이유: 메모장을 이용해서 컴파일하는 것보다 효율적이다.
+	0) Web application Server
+
+	1) 쓰는 이유: 
+
+	   - 메모장을 이용해서 컴파일하는 것보다 효율적이다. 
+		      
+	   - HTML을 자바코드로 바꿈.
+
+	   - 게시판의 글 목록, 로그인 처리와 같은 기능을 처리하고 그 결과를 웹 서버에 전달
+
+	   - 웹 서버와 웹 어플리케이션의 역할을 하고 웹 콘테이너 역할을 하여 JSP와 Servlet을 지원한다.
+
+
 
 	2) 주의점 오라클과 포트번호가 같아서 충돌이 있을 수 있다. 
 	   
@@ -57,6 +69,8 @@
 	 HTML 관련 프로젝트: New -> Dynamic Web Project 
 
 	  * Tomcat runtime이 현재버전과 맞는지 보고 Dynamic web module version 4.0인지 확인할 것.
+	
+	 폴더 생성이 연동 build path -> Add library -> Server Runtime -> Next 
 
  	 1) WebContent: HTML
 
@@ -71,6 +85,8 @@
 	 2) Java Resouces: Java Script
 
 	 3) 백엔드위주 에디터라 html을 잘 지원하지 않는다.
+
+	 
 
 1. HTML 태그와 요소
 
@@ -263,6 +279,29 @@
    	   ex) <시작태그 style="background-color: #ff0000;">
 	       <시작태그 style="background-color: #ff000099;">
 
+   (10) a 태그
+	
+	1) a href  
+
+	  1-1) 형식: <a href = "url" target = "value"> link text </a>
+
+	  1-2) target에 들어가는 값들: _blank(새창)
+				       _self(default, 자기자신)
+				       _parent(부모창)
+				       name
+
+	2) a:link	=> 일반적인 링크 색 (아직방문하지 않음, blue)
+	   a:visited	=> 방문한적인 있는 링크 (purple)
+	   a:active 	=> 클릭한 상태의 링크 (red)
+	   a:hover 	=> 마우스를 해당 링크에 올렸을 때 
+
+	   text-decoration => 링크 아래 삭제
+
+    (11) img 태그
+	
+	1) <img src = "url" alt="그림 대신 나오는 문자" title="툴팁" width="넓이" height="높이">
+
+	
 
 4. CSS
 
@@ -275,13 +314,16 @@
    (2) 3가지 Style
 
 	1) Inline - by using the style attribute inside HTML elements: 태그 안에다가 쓰는것
+		
+	   ex) <h1 style="background-color: tomato; text-align: center;"> HTML CSS 연습</h1>
 
 	2) Internal - by using a <style> element in the <head> section
 
 	3) External - by using a <link> element to link to an external CSS file: 
-		      Internal이 많아져서 가독성이 떨어지는 것을 방지.
+		      외부에서 CSS파일을 만들어서 사용하는 방법.
 
    (3) 구조
+
 	1) Internal CSS
 	<!DOCTYPE html>
 	<html>
@@ -299,7 +341,29 @@
 		</body>
 	</html>
 
+    (4) padding and margin
+
+	1) padding: 테두리 안 여백
+
+	2) margin: 테두리 밖 여백
+
+	* 값이 하나일 때: 상하좌우 모두 적용
+	* 값이 두 개 일 때: 상하, 좌우
+ 	* 값이 네 개 일 때: 북쪽, 동쪽, 남쪽, 서쪽 (시계 방향)
+
+
+5. 테이블 만들기
+
+   (1) Intro
+		열(column)
+	행(row)
+
+
+	2) 테이블 테두리는 CSS에서 뺀다. <style>태그를 이용.
+	
+
 #. Tip
+  1. 예쁘게 만드는 것 보다 검색이 신속 정확한게 우선이다.
 
-	예쁘게 만드는 것 보다 검색이 신속 정확한게 우선이다.
-
+  2. 복사를 한꺼번에 한다음에 붙이고 코드를 작성하면 서버가 꼬일 수 있기 때문에 서버를 끄고 해야된다.
+     일부분만 복사를 해서 붙여야 된다.

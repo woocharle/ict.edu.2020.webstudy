@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> table 배경색 </title>
+		<style>
+			table, th, td{
+				border: 2px solid black;
+			}
+			table{
+				width: 700px;
+				margin: auto;
+				background-color: #ffff00;
+			}
+			td{
+				text-align: center;
+			}
+		
+			thead{
+				background-color: purple;
+			}	
+		</style>
+		
+		
+	</head>
+	
+	<body>
+		<!-- 옛날 방식 -->
+		<p style="font-size: 20px; text-align: center; margin: auto;">옛날 방식</p>
+		<br>
+		<p> 기존은 테이블, 행, 데이터, 기준으로 일일이 배경색 지정 <br>
+			열 위주의 배경색 지정 :  태그 
+		</p>
+		<br>
+		<table>
+			<thead style="background-color: orange">
+				<tr><th> 방이름 </th> <th> 대상</th> <th> 크기 </th> <th> 가격</th> </tr>
+			</thead>
+	
+			
+			<tbody style="background-color: aqua;">
+				
+				<tr><td>유채방</td> <td>여성</td> <td rowspan="3">4인실</td> <td rowspan="4">1인 20,000원</td> </tr>
+				<tr><td rowspan="2" style="background-color: gray">동백방</td> <td>동성</td> </tr>
+				<tr><td>가족</td> </tr>
+				<tr><td>장미방</td> <td>누구나</td> <td>2인실</td> </tr>
+			</tbody>
+			
+			</tbody>
+		
+		</table>
+	
+		<br><br>
+	
+		<table>
+				<!--<col style = "background-color: green;">-->
+				<!--<col style = "background-color: white;">-->
+				<colgroup span="2" style="background-color: lightgray">
+			
+			<thead>
+				<tr><th> 방이름 </th> <th> 대상</th> <th> 크기 </th> <th> 가격</th> </tr>
+			</thead>
+
+			<tbody>
+			
+				<tr><td>유채방</td> <td>여성</td> <td>4인실</td> <td>1인 20,000원</td> </tr>
+				<tr><td>동백방</td> <td>동성</td> <td>4인실</td> <td>1인 20,000원</td> </tr>
+				<tr><td>동백방</td> <td>가족</td> <td>4인실</td> <td>1인 20,000원</td> </tr>
+				<tr><td>장미방</td> <td>누구나</td> <td>2인실</td> <td>1인 20,000원</td> </tr>
+			</tbody>
+			
+			</tbody>
+		
+		</table>
+	
+		<br><br>
+		
+		<table>
+			<thead>
+				<tr><th> 방이름 </th> <th> 대상</th> <th> 크기 </th> <th> 가격</th> </tr>
+			</thead>
+			
+			<tbody>
+				<tr><td>유채방</td> <td>여성</td> <td>4인실</td> <td>1인 20,000원</td> </tr>
+				<tr><td>동백방</td> <td>동성</td> <td>4인실</td> <td>1인 20,000원</td> </tr>
+				<tr><td>동백방</td> <td>가족</td> <td>4인실</td> <td>1인 20,000원</td> </tr>
+				<tr><td>장미방</td> <td>누구나</td> <td>2인실</td> <td>1인 20,000원</td> </tr>
+			</tbody>
+			
+			</tbody>
+		
+		</table>
+	
+		<br><br>
+	
+	</body>
+</html>

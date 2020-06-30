@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Image Map</title>
+	</head>
+	
+	<body>
+		
+		<!-- 1단계: 해당 이미지에 usemap 속성부여 -->
+		<img alt="" src="../images/workplace.jpg" usemap="#imgmap">
+		
+		<!-- 2단계: map 태그안에 area태그를 만들어서 영역을 잡는다. 
+			 영역 잡는 모양은 사각형과 원.
+			 사각형 (시작 x, 시작 y, 끝x, 끝 y)
+			 원 (중심좌표 x,  y, 반지름)
+		-->
+		<map name="imgmap"> 
+			<area shape="rect" coords="30,40,275,350"  href="https://www.naver.com" target="_blank">
+			<area shape="rect" coords="30,40,275,350"  href="https://www.naver.com" target="_blank">
+			<area shape="circle" coords="30,40,275,350"  href="https://www.naver.com" target="_blank">
+			
+		</map>
+	
+	</body>
+	
+</html>

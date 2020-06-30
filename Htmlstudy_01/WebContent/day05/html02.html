@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>ul 태그가지고 메뉴 만들기</title>
+		<style>
+			p{
+				margin: 20px 0px 0px 30px; 
+				font-size: 20px;
+			}
+			ul{
+				list-style-type: none;
+				margin: 0px;
+				padding: 0px;
+				overflow: hidden;
+				background-color: #999999;
+			}
+			/* 한줄로 만들기 */
+			li{
+				float: left;
+			}
+		
+			li > a{
+				display: block;
+				color: white;
+				text-align: center;
+				padding: 16px;
+				text-decoration: none;
+				
+			}
+			
+			li > a:hover{
+				background-color: #555;
+			}
+			
+		</style>
+		
+	</head>
+		
+	<body>
+		<p>
+			li 태그안에 있는 a태그 (자손)
+		
+		</p><br>
+		
+		
+	
+		<ul>
+			<li><a href="#">HOME </a></li>
+			<li><a href="#">문서1 </a></li>
+			<li><a href="#">문서2 </a></li>
+			<li><a href="#">문서3 </a></li>
+
+		</ul>
+	</body>
+</html>

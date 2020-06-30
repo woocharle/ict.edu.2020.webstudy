@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> javascript </title>
+	</head>
+	
+	<body>
+		<!-- 
+			JavaScript는 html 페이지를 보다 동적이고 대화식으로 만들어줌
+			<script>태그는 JavaScript를 정의하는 데 사용한다.
+			보통 head에서 사용 하나 body에서도 사용 가능하다.
+		
+			** 태그 속성 중에 onXXX()속성은 JavaScript의 function()를 호출하는 것이다.
+				onclick()은 해당 요소를 클릭하면 실행한다는 것이다.  
+		
+			** ID와 class, 태그를 호출해서 실행할 수도 있다.
+		 	class 호출: document.getElementsByClassName("")
+		 	id 호출: 	document.getElementsByID("")
+		 	
+		 	** innerHTML(): 해당 요소를 html을 가져(get)오거나 설정(set)할 때 사용.
+		 	   const content = element.innerHTML; (get)
+		 	   element.innerHTML = htmlString; 	  (set)	
+		 	   
+		 	   
+		 -->
+		<button onclick = "document.getElementById('demo1').innerHTML = Date()"> 오늘날짜보기</button>
+		<h2 id = "demo1">시간표시영역</h2>
+		<hr>
+		
+		<h2 id = "demo2">시간표시영역 </h2>
+		<script type ="text/javascript">
+			document.getElementById('demo2').innerHTML = Date()
+		</script>
+
+		<!-- 
+			JavaScript는 객체를 받기 때문에 자기보다 위에있는 것보다 못 잡는다.
+		
+		 -->
+		 <img id="img" alt="" src =""><br>
+		 <script type="text/javascript">
+		 	document.getElementById('img').src = "../images/pic_trulli.jpg";
+		 </script>
+		 <button onclick = "document.getElementById('img').src = '../images/pic_trulli.jpg'">켜기</button>
+		 <button onclick = "document.getElementById('img').src = '../images/naver.jpg'">끄기</button>
+	
+	</body>
+	
+</html>
