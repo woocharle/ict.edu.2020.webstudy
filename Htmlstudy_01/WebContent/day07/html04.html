@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<!-- <button onclick="자바스크립트함수이름()"></button> -->
+		<button onclick="getLocation()">경도와 위도 호출</button>
+		<p id="demo"></p>
+		<script type="text/javascript">
+			var x = document.getElementById("demo");
+			function getLocation(){
+				if(navigator.getlocation){
+					navigator.getlocation.getCurrentPosition(showPosition);
+				}else{
+					x.innerHTML="경도와 위도를 찾을 수 없습니다.";
+				}
+			}
+			
+			function showPosition(position){
+				x.innerHTML="위도 : " + position.coords.latitude + "<br>"
+							"경도 : " + position.coords.longitude;
+			}
+		
+		</script>
+		
+		
+	</body>
+</html>
