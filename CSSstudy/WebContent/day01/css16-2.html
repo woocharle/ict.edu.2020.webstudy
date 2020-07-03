@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> 수평바와 드롭다운 메뉴 </title>
+		<style type="text/css">
+			ul{
+				list-style-type: none;
+				overflow:hidden;
+				background-color: #aaa;
+			}
+			li{
+				float: left;
+			}
+			li a{
+				display: inline-block;
+				padding: 10px 20px;
+				color: white;
+				text-decoration: none;
+			}
+			li a:hover{
+				background-color: #777;
+				font-size: 1.5em
+			}
+			#btn:hover{
+				display: block;
+			}
+			div.drop-content{
+				display: none;
+				position: absolute;
+				background-color: #f9f9f9;
+			}
+			
+			div.drop-content a{
+				color: black;
+				padding: 12px 16px;
+				text-decoration: none;
+				display: block;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<h2> 수평바 메뉴 만들기 </h2>
+		<ul>
+			<li><a href="#"> Home</a></li>
+			<li><a href="#"> News</a></li>
+			<li><a href="#"> Contents</a></li>
+			<li><a href="#"> About</a></li>
+		
+		</ul>
+		
+		<br><br>
+		
+		<h2> 드롭 다운 메뉴 </h2>
+		<div class="dropdown">
+			<span id="btn"> web program </span>
+			<div class="drop-content">
+				<a href="#">java</a>
+				<a href="#">servlet</a>
+				<a href="#">jsp</a>
+				<a href="#">spring</a>
+			</div>
+			
+		</div>
+		
+	</body>
+</html>

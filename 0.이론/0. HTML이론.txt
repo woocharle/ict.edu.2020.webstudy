@@ -7,6 +7,10 @@
         CSS: 	   웹페이지의 모양과 스타일 지정
         JavaScript: 웹페이지의 동작과 기능을 지정
 
+	반응형 웹 에서 사용하는 폰트
+
+	vw: 뷰포트: 디바이스창의 크기에 맞춰서, 1vw
+
    (2) HTML(Hyper Text Markup Language)이란? 
 
         1) 정의: 웹 페이지의 표준 마크 업 언어. / 웹페이지를 표시하는 언어.
@@ -86,8 +90,14 @@
 	 2) Java Resouces: Java Script
 
 	 3) 백엔드위주 에디터라 html을 잘 지원하지 않는다.
+	
 
+    (5) Node.js 설치 할 것. Dynamic Project를 설치할 때 경고문이 뜨지 않고 업무를 지원해준다. 
 	 
+    (6) HTML은 요청을 Servlet을 거쳐서 가야된다.
+
+    (4) 400: client 오류, 500: server 오류
+	
 
 1. HTML 태그와 요소
 

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>position 속성: 위치 속성</title>
+		<style type="text/css">		
+			div{
+				width: 200px;
+				height: 200px;
+				border: 1px solid black;
+				margin: 10px 5px;
+				padding: 5px;
+				/*display: Inline-block;*/
+			}
+			div#cont1{
+				position: static;
+				background-color: yellow;
+			}
+			
+			div#cont2{
+				position: static;
+				left: 20px;
+				top: -20px;
+				background-color: lightgreen;
+			}
+			
+			div#cont3{
+				position: static;
+				left: 50px;
+				top: -50px;
+				background-color: lightblue;
+			}
+			
+		</style>
+		
+	</head>
+	
+	<body>
+		<!-- 
+			static: 태그가 위에서 아래로 순서대로 배치.
+					정적(문서의 흐름에 거스르지 않고 다른 요소와 거스르지 않는다.)
+			relative: 상대적, 초기 위치 상태에서 상하좌우로 위치를 이동
+			absolute : 절대적, 절대위치좌료를 설정
+			fixed: 고정, 화면을 기준으로 절대 위치 좌표를 설정
+			
+			top, bottom, left, right 속성으로 배치
+		 -->
+		 <div id="cont1"> 대한민국 대한민국 대한민국 대한민국 대한민국 대한민국 </div>
+		 <div id="cont2"> 대한민국 대한민국 대한민국 대한민국 대한민국 대한민국 </div>
+		 <div id="cont3"> 대한민국 대한민국 대한민국 대한민국 대한민국 대한민국 </div>
+	
+	
+	</body>
+</html>

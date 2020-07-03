@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>If문</title>
+		<script type="text/javascript">
+			
+			// k1이 90이상이면 합격 아니면 불합격
+			var k1 = prompt("점수를 입력하시오.");
+			var res = "";
+			
+			if (k1 >= 90){
+				res = "합격";
+			}else{
+				res = "불합격";
+			}
+			
+			document.write(res + "<br>");
+			
+			var k2 = prompt("시간을 입력하시오.");
+			var sal = 0;
+	
+			if (k2 > 8){
+				sal = (k2-8) * 8950 * 1.5 + 8 * 8950; 
+				
+			}else{
+				sal = 8950 * k2;
+			}
+			document.write("일당은 "  + sal + "원 입니다. <br>");
+		
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>
