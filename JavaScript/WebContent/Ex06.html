@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>배열: array</title>
+		<script type="text/javascript">
+	
+			document.write("배열 생성 및 출력_1 <br>");
+			var arr = new Array();
+			arr[0] = 1;
+			arr[1] = true;
+			arr[2] = 'A';
+			arr[3] = "ICT 인재 개발원";
+			arr[4] = 3.14
+			
+			for (var i = 0; i < arr.length; i++) {
+				document.write(arr[i] + "<br>");
+			}
+			
+			document.write("<hr><br>배열 생성 및 출력_2 <br><br>");
+			var arr2 = new Array("boys", true, 'Y', 4201, 23.12045);
+			
+			for (var i = 0; i < arr2.length; i++) {
+				document.write("<h3>"+arr2[i]+"</h3>");
+			}
+			
+			document.write("<hr><br>배열 생성 및 출력_3 <br><br>");
+			var arr3 = ["태조", "정종", "태종", "세종", "문종", "단종"];
+			for(var k in arr3){
+				document.write("<h3>"+arr3[k]+"</h3>");
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

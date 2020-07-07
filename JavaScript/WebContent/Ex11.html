@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>객체: Object</title>
+		<script type="text/javascript">
+			var person1 = new Object();
+			person1["name"] = "홍길동";
+			person1["age"] = 14;
+			person1["gender"] = true;
+			
+			document.write("<h2> Object 상태값 호출");
+			document.write("<p>" + person1["name"] + "</p>");
+			document.write("<p>" + person1.age + "</p>");
+			document.write("<p>" + person1.gender + "</p>");
+			
+			document.write("</h2>");
+			
+			var person2 ={name:"유관순", age: 18, addr:"충청도", gender:false};
+			document.write("<h2> Object 상태값 호출");
+			document.write("<p>" + person2["name"] + "</p>");
+			document.write("<p>" + person2.age + "</p>");
+			document.write("<p>" + person2.addr + "</p>");
+			document.write("<p>" + person2.gender + "</p>");
+			document.write("</h2>");
+			
+			document.write("<hr>");
+			
+			
+			var person3 = {
+				name: "장길산",
+				age: 27,
+				gender: true,
+				prn: function(){
+					return "Fuck the chosun";
+				},
+				play: function(){
+					document.write(this.name + ", " + this.age + ", " + this.gender);
+				}
+			}
+			
+			document.write("<p>" + person3["name"] + "</p>");
+			document.write("<p>" + person3.age + "</p>");
+			document.write("<p>" + person3.gender + "</p>");
+			//document.write("<p>" + person3.prn + "</p>");
+			document.write("<p>" + person3.prn() + "</p>");
+			document.write("<p>")
+			person3.play();
+			
+			document.write("</p>")
+			document.write("<hr>");
+			
+			function prn(msg){
+				document.write(msg + "<br>")
+			}
+			
+			var person4 = {
+				name : "전일재",
+				age: 500,
+				salary: 2400000000000,
+				pay: function(){
+					var month = this.salary / 12; 
+					prn("이름: " + this.name + " 월급: " + month + "원");
+				}
+				
+			}
+			
+			person4.pay();
+			document.write("<hr>");
+			
+			var person5 = person4.name;
+			prn(person5);
+			document.write("<hr>");
+			
+			var person6 = person4;
+			person6.name = "이학영";
+			person6.salary = 24000000;
+			person6.pay();
+			document.write("<hr>");
+			
+			var person7 = person4.pay;
+			var name = "한승수";
+			var salary = 12000000;
+			person7();
+			
+			
+		</script>
+	</head>
+	<body>
+	
+	
+	</body>
+</html>

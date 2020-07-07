@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>String</title>
+		<script type="text/javascript">
+			var str1 = 'Hello';
+			var str2 = new String('welcome');
+			
+			document.write(str1+"<br>");
+			document.write(str2+"<br>");
+			document.write("<br>");
+			
+			document.write(str1.length+"<br>");
+			document.write(str2.length+"<br>");
+			document.write("<br>");
+			
+			document.write(str1.concat("Hello")+"<br>");
+			document.write(str2.concat("Hello")+"<br>");
+			document.write("<br>");
+			
+			document.write(str1.indexOf("l")+"<br>");
+			document.write("<br>");
+			
+			document.write(str1.indexOf("l",str1.indexOf("l")+1)+"<br>");
+			document.write("<br>");
+			
+			document.write(str1.search("l")+"<br>");
+			document.write("<br>");
+			
+			str1= "Apple, Banana, Kiwi";
+			var str = str1.split(",");
+			for(var k in str){
+				document.write(str[k] + "<br>");
+			}
+			document.write("<br>");
+			
+			document.write(str1.substring(0, 5) + "<br>");
+			document.write("<br>");
+			
+			document.write(str1.replace("Banana", "Mango") + "<br>");
+			
+			document.write(str1.toUpperCase() + "<br>");
+			document.write(str1.toLowerCase() + "<br>");
+			
+			str1 = "     fuck you   ";
+			document.write(str1 + " = " + str1.length + "<br>");
+			str1 = str1.trim();
+			document.write(str1 + " = " + str1.length + "<br>");
+			document.write("<br>");
+			
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

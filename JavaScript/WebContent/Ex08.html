@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> function</title>
+		<script type="text/javascript">
+			function test1(){
+				document.write("<h1> 선언함수 </h1>");
+			}
+			//test1();
+					
+			var msg = function(){
+				document.write("<h1> 익명함수 </h1>")
+			}
+			//msg();
+			
+			function test2(){
+				document.write("<h1> Hi~~~~ </h1>");
+			}
+			
+			function test2(){
+				document.write("<h1> Hello </h1>");
+			}
+			
+			// 리턴 X
+			function add(a, b){
+				document.write("결과: " + (a + b) + "<br>");
+			}
+			
+			add(5,10)
+			// 리턴 O
+			
+			function sub(a, b){
+				return a - b;
+			}
+			
+			function gugu(dan){
+				for( var i = 1; i < 10; i++){
+					document.write(dan + " * " + i + " = " + (dan * i) + "&nbsp;");
+				}
+			}
+			
+		
+		</script>
+	</head>
+	<body>
+		<h1> 안녕하세요.</h1>
+		<script type="text/javascript">
+			test1();
+			
+			msg();
+			
+			test2();
+
+			var test3 = function(){
+				document.write("<h1> See you </h1>")
+			}
+			
+			var test3 = function(){
+				document.write("<h1> Fuck you </h1>")
+			}
+			
+			test3();
+			
+			
+			function test4(){
+				document.write("<h1> Hi~~~~ </h1>");
+			}
+			
+			var test4 = function(){
+				document.write("<h1> Fuck you </h1>")
+			}
+			
+			test4();
+			
+			add(5, 7);
+			
+			var k = sub(8, 4);
+			document.write("결과 : " + k + "<br>");
+			
+			gugu(5);
+			
+		</script>
+	</body>
+</html>
