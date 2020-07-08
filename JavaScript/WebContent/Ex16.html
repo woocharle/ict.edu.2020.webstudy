@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>배열 연습 2</title>
+		<script type="text/javascript">
+			document.write("welcome");
+		</script>
+	</head>
+	<body>
+		<h2> 자바 스크립트 </h2>
+		<p id="demo1"></p>
+		<p id="demo2">안녕하세요 </p>
+		<p id="demo3"></p>
+		<p id="demo4"></p>
+		<p id="demo5"></p>
+		<p id="demo6"></p>
+		<p id="demo7"></p>
+		<p id="demo8"></p>
+		<p id="demo9"></p>
+		<p id="demo10"></p>
+		<p id="demo11"></p>
+		<p id="demo12"></p>
+		<p id="demo13"></p>
+		
+		<script type="text/javascript">
+			var dog = ["요크셔", "말티즈", "쉐퍼드", "치와와"];
+			
+			document.getElementById("demo1").innerHTML = dog;   //setter
+		
+			var a = document.getElementById("demo2").innerHTML; // getter
+			
+			document.write(a + "방가방가~~~");
+			
+			document.getElementById("demo3").innerHTML = "<h2>"+ dog[0] + "</h2>";
+			
+			dog.shift();
+			
+			document.getElementById("demo4").innerHTML = dog;
+			
+			dog.pop();
+			
+			document.getElementById("demo5").innerHTML = dog;
+			
+			dog.unshift("푸들");
+			
+			document.getElementById("demo6").innerHTML = dog;
+			
+			dog.push("시츄");
+			
+			document.getElementById("demo7").innerHTML = dog;
+			
+			var arr1 = ["Banana", "Orange", "Apple", "추성훈", "김동현", "김민수", "정찬성"];
+			
+			document.getElementById("demo8").innerHTML = arr1;
+			document.getElementById("demo9").innerHTML = arr1.sort();
+			document.getElementById("demo10").innerHTML = arr1.reverse();
+			
+			var arr2 = ["09", "05", "01" , "02", "10", "03" , "04", "08"]
+			
+			document.getElementById("demo11").innerHTML = arr2;
+			document.getElementById("demo12").innerHTML = arr2.sort();
+			document.getElementById("demo13").innerHTML = arr2.reverse();
+			
+		</script>
+	</body>
+</html>
