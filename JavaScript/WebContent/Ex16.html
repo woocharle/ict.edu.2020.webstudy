@@ -22,6 +22,13 @@
 		<p id="demo11"></p>
 		<p id="demo12"></p>
 		<p id="demo13"></p>
+		<p id="demo14"></p>
+		<p id="demo15"></p>
+		<p id="demo16"></p>
+		<p id="demo17"></p>
+		<p id="demo18"></p>
+		<p id="demo19"></p>
+		<p id="demo20"></p>
 		
 		<script type="text/javascript">
 			var dog = ["요크셔", "말티즈", "쉐퍼드", "치와와"];
@@ -61,6 +68,23 @@
 			document.getElementById("demo11").innerHTML = arr2;
 			document.getElementById("demo12").innerHTML = arr2.sort();
 			document.getElementById("demo13").innerHTML = arr2.reverse();
+			
+			var arr3 = arr1.concat(arr2);
+			
+			document.getElementById("demo14").innerHTML = arr3;
+			document.getElementById("demo15").innerHTML = arr3.sort();
+			document.getElementById("demo16").innerHTML = arr3.reverse();
+			
+			var arr4 = arr3.splice(2,2)
+			
+			document.getElementById("demo17").innerHTML = arr4;
+			document.getElementById("demo18").innerHTML = arr4.sort();
+			document.getElementById("demo19").innerHTML = arr4.reverse();
+			
+			arr4.splice(1,1, "두리안 ", "키위")
+			
+			document.getElementById("demo20").innerHTML = arr4;
+
 			
 		</script>
 	</body>

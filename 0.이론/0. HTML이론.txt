@@ -376,6 +376,11 @@
 	2) 테이블 테두리는 CSS에서 뺀다. <style>태그를 이용.
 	
 
+6. 보충 
+
+   (1) input 태그
+
+	1) onchange:  enter를 치면 버튼을 누르면 text의 입력 내용이 value가 된다.
 
 
 

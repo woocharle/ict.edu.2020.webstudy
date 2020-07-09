@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<p id="demo1"> Hello World </p>
+		<p> <span> Welcome JavaScript </span> </p>
+		<p class = "demo2"> 서울시 마포구 서교동 </p>
+		<p class = "demo2"> 첨단빌딩 7층 </p>
+		<p class ="demo2"> 2강의실  </p>
+		<hr>
+		
+		<p id="res1"></p>
+		<p id="res2"></p>
+		<p id="res3"></p>
+		
+		<script type="text/javascript">
+			var my1 = document.getElementById("demo1");					//getEle... 오른쪽에 있으면 getter 
+			document.getElementById("res1").innerHTML = my1.innerHTML;
+			
+			var my2 = document.getElementsByTagName("span");
+			document.getElementById("res2").innerHTML = my2[0].innerHTML;
+			
+			var my3 = document.getElementsByClassName("demo2");
+			var result="";
+			for (var i = 0; i < my3.length; i++) {
+				 result = result + my3[i].innerHTML + "&nbsp;";
+			}
+			// "<br><br>"
+			document.getElementById("res3").innerHTML = result;
+		
+		</script>
+		
+	</body>
+</html>
