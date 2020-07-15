@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style type="text/css">
+			.box{
+				margin: auto;
+				width: 300px;
+				height: 300px;
+				margin: auto;
+			}
+			
+		</style>
+		<script type="text/javascript">
+		
+			function TurnON(){
+				document.getElementById("1").style.display ="block";
+				document.getElementById("2").style.display ="none";
+			}
+			
+			function TurnOFF(){
+				document.getElementById("1").style.display ="none";
+				document.getElementById("2").style.display ="block";
+			}
+			
+
+	
+		</script>
+		
+	</head>
+	<body>
+		<div style="margin: auto; width:300px; padding: 20px" >
+			<button onclick="TurnON()"> 켜기 </button>		
+			<button onclick="TurnOFF()"> 끄기 </button>			
+		</div>
+		
+		<div class="box" id="b1"> 
+			
+			<img id ="1" src = "images/bulon.jpg" style="display:block">
+			<img id ="2" src = "images/buloff.jpg" style="display:none">
+		
+		</div>
+		
+
+	</body>
+</html>

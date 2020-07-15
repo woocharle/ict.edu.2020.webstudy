@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>이벤트: onmouseover, onmouseout </title>
+		<style type="text/css">
+			div{
+				width: 150px;
+				height: 20px;
+				padding: 40px;
+			}
+			#box1{background-color: #898989;}
+			#box2{background-color: #ffff55;}
+			#box3{background-color: blue;}
+			#box4{background-color: fuchsia;}
+			#box5{background-color: olive;}
+			
+		</style>
+		<script type="text/javascript">
+			function mOver(obj) {
+				obj.innerHTML = "<h3>Thank you</h3>";
+			}
+			
+			function mOut(obj) {
+				obj.innerHTML = "Mouse Over me";
+			}
+			
+			function mDown(obj) {
+				obj.style.background = "tomato";
+				obj.innerHTML = "<h3>Thank you</h3>";
+			}
+			
+			function mUp(obj) {
+				obj.style.background = "pink";
+				obj.innerHTML = "Click me";
+			}
+			
+			function test1() {
+				obj.style.background = "tomato";
+				obj.innerHTML = "<h3>Thank you</h3>";
+			}
+			
+			function test2(obj) {
+				obj.style.background = "red";
+				obj.innerHTML = "Hip Hip Hip 머리 어깨";
+			}
+
+			
+		</script>
+	</head>
+	<body>
+		<div id="box1" onmouseover="mOver(this)" onmouseout="mOut(this)"> Mouse Over Me1</div>
+		<div id="box2" onmouseover="mDown(this)" onmouseout="mUp(this)"> Mouse Over Me2</div>
+		<div id="box3" onclick="test1()"> Click Me1</div>
+		<div id="box4" onclick="test2(this)"> Click Me2</div>
+		<div id="box5"> Click Me3</div>
+		
+		<!-- 제일 간단한 방법 -->
+		
+		<script type="text/javascript">
+			document.getElementById("box5").addEventListener("click", function(){
+				document.getElementById("box5").style.background ="skyblue";
+			})
+		</script>
+		
+		
+		
+	</body>
+</html>

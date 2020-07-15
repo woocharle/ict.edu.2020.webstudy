@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			function TurnOn(){
+				document.getElementById("img").src ="images/pic_bulbon.gif";
+			}
+			function TurnOff(){
+				document.getElementById("img").src ="images/pic_bulboff.gif";
+			}
+			
+			function TurnOn1(){
+				document.getElementById("img2").src ="images/pic_bulbon.gif";
+			}
+			function TurnOff1(){
+				document.getElementById("img2").src ="images/pic_bulboff.gif";
+			}
+			
+			function ViewOn(){
+				document.getElementById("img3").style.display="block";
+			}
+			function ViewOff(){
+				document.getElementById("img3").style.display="none";
+			}
+			
+			
+		</script>
+	</head>
+	<body>
+		<div style="margin: auto; width: 100px;">
+			<p> <img id="img" src="images/pic_bulbon.gif"> </p>
+			<p> <button onclick="TurnOn()">켜기</button>
+				<button onclick="TurnOff()">끄기</button>
+			</p>
+			<br>
+			<span onmouseover="TurnOn1() " onmouseout= "TurnOff1() "> 
+				<img id="img2" src="images/pic_bulboff.gif"> <br>
+			</span>
+			<br><br><br>
+			
+			<h3 onmouseover="ViewOn()" onmouseout= "ViewOff()" > 안녕하세요.</h3>
+			<br><br><br>
+			<img id ="img3" src = "images/pic_bulboff.gif" style="display:none;">
+
+		</div>
+		
+		
+		
+	</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<!--  <script type="text/javascript" src="js/jquery-3.5.1.js"> 
+		
+	
+	</script>-->
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	
+	<script type="text/javascript">
+		//jquery 사용 
+		/*
+		$(document).ready(function(){
+	     	document.write("Hi");
+   	    });
+		*/
+		// javaScript
+		
+		//document.getElementById("btn")
+		
+		$(function() {
+			//$("p").hide();
+			//$("#p1").hide();
+			//$(".p2").hide();
+			$("button").click(function() {
+				$(".p2").hide();
+			});
+			
+			$("#btn").click(function() {
+				$(".p2").show();
+				$("#btn2").show();
+				$("p:last").hide();
+			});
+			
+			$("#btn2").click(function() {
+				$(this).hide();
+				$("p:last").show();
+			});
+			
+			$("ul>li:first-child").hide();
+			$("li:last-child").hide();
+			
+			
+			
+		});
+		
+		
+		
+	</script>
+</head>
+<body>
+	<h2> jQuery Syntax</h2>
+	<p id="p1"> ICT 인재개발원 1 </p>
+	<p class="p2"> ICT 인재개발원 2 </p>
+	<p class="p2"> ICT 인재개발원 3 </p>
+	<button> 클릭해주세요. </button>
+	<button id="btn"> 클릭해주세요. </button>
+	<button id="btn2"> 클릭해주세요. </button>
+	<hr>
+	<p> 빅트레블뱅</p>
+	<p> 강의실 2 </p>
+	
+	<ul>
+		<li> coffee </li>
+		<li> tea </li>
+		<li> ice cream </li>
+		<li> water </li>
+	</ul>
+	<ul>
+		<li> coffee2 </li>
+		<li> tea2 </li>
+		<li> ice cream2 </li>
+		<li> water2 </li>
+	</ul>
+	
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

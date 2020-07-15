@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>숫자 넣기</title>
+		<script type="text/javascript">
+			function myFunction(){
+				var text;
+				var x = document.getElementById("num").value;
+				
+				if (x >= 1 && x<=10) {
+					//alert("제대로 입력.");
+					document.getElementById("res1").style.display="block" ;
+					document.getElementById("res2").style.display="none" ;
+					return;
+				} else{
+					//alert("잘못 입력하셨습니다.");
+					document.getElementById("res1").style.display="none" ;
+					document.getElementById("res2").style.display="block" ;
+					document.getElementById("num").value = "";
+					document.getElementById("num").focus();
+					return;
+				}
+			}
+		
+		</script>
+	</head>
+	<body>
+		<h1> Form 태그 유효성 검사 </h1>
+		
+		<form>
+			<p> 1부터 10까지만 입력하시오.</p> 
+			<input type="number" id = "num"> 
+			<button type="button" onclick="myFunction()"> submit </button>
+			<p id = "res1" style="display: none;"> 제대로 입력. </p>
+			<p id = "res2" style="display: none;"> 잘못 입력하셨습니다. </p>
+			
+		</form>
+
+		
+		
+		
+	</body>
+</html>

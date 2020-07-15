@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title> Action </title>
+	<style>
+		.silver{background-color: silver;}
+		
+		.bg{background-color: yellow;}
+		
+		
+		.fg{color: red;}
+		.horizontal{
+			float: left;
+			list-style: none;
+			margin: 20px;
+		}
+		
+		.selected{color: blue;}
+		div{background-color: green;}
+		.white{color: white;}
+		
+	</style>
+	<script type="text/javascript">
+		function go(){
+			alert('Hello');
+		}
+	</script>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			document.getElementById("ch1").onclick=function(){
+				alert("jquery에서 javascript DOM 방식");
+				document.getElementById("ch1").style.background="skyblue";
+			}
+			
+			$("#ch2").click(function(){
+				alert("jQuery 방식");
+				$("#ch2").addClass("silver");
+			});
+		})
+		
+		$(function() {
+			$("li").addClass("bg");
+			$(".s").addClass("fg");
+			$("#sp").addClass("fg");
+			$("ul>li").addClass("horizontal");
+			$("ol li").addClass("horizontal");
+		});
+		
+		$(function() {
+			$("p").first().addClass("bg selected");
+			$("p").last().addClass("bg selected");
+			
+			//$("div:even").addClass("bg");	
+			//$("div:odd").addClass("selected");	
+			
+			$("div").addClass(function(index, currentClass) {
+				var wh;
+				if(currentClass === "white"){
+					wh = "white";
+					addedClass = "white";
+					$("#box").html("<h2>여기는 DIV입니다.</h2>");   //innerHTML과 같다.
+				}
+				return wh;
+			});
+			
+		});
+
+	</script>
+</head>
+<body>
+	<h2> click()과 addClass </h2>
+	<div style="background-color: fuchsia;" onclick="alert('fuck you')">
+		안녕하세요 jQuery-1입니다.
+	</div>
+	
+	<div class="silver" onclick="go()"> 안녕하세요 jQuery-2입니다.</div>
+	
+	<div id ="ch1"> 안녕하세요 jQuery-3입니다.</div>
+	
+	<div id ="ch2"> 안녕하세요 jQuery-4입니다.</div>
+
+	<hr>
+	<br>
+	
+	<h2> click()과 addClass </h2>
+	<h2>
+		<ul id="menu1">
+			<li><u>java</u></li>
+			<li>html&css</li>
+			<li class="s">servlet&jsp</li>
+			<li id="sp">spring</li>
+		</ul>
+		
+		<ol id="menu2">
+			<li><u>android</u></li>
+			<li>iphone</li>
+			<li class="s">window<u>phone</u></li>
+			<li id="mo">mobile</li>
+		</ol>
+	</h2>
+	<br><br><br><br>
+	
+	<hr>
+	<br>
+	
+	<p>Hello</p>
+	<p>and</p>
+	<p>Good Bye</p>
+	
+	<div>This div</div>
+	<div class="white">This div</div>
+	<div id="box"> This div</div>
+	<div> This div</div>
+	<div> This div</div>
+	<div> This div</div>
+	<div> This div</div>
+	
+	
+</body>
+</html>
