@@ -1,0 +1,102 @@
+
+
+1. 정의: 전체 정보 중 원하는 정보들만 가져오는 기법.
+
+   *참고: 0724Board
+   
+2. 과정
+
+   (1) 해당페이지의 시작번호, 끝번호 구하기 
+
+   (2) 시작과 끝블록 구하기
+
+3. Paging 클래스 (예시)
+
+
+    private int nowPage = 1;    	//현재페이지
+    private int nowBlock = 1;		//현재블록
+    private int totalRecord = 0;	//총 게시물의 수 
+    private int totalPage = 0;		//총 페이지의 수
+    private int totalBlock = 0; 	//총 블록의 수
+    private int numPerpage = 10;	//한 페이지에 존재하는 게시물의 수
+    private int pagePerBlock = 3;	//한 블록안에 존재하는 페이지의 수
+	
+    private int begin = 0; 	//시작번호
+    private int end = 0; //끝번호
+    private int beginBlock = 0; //시작블록
+    private int endBlock = 0; //끝블록
+
+    아래는 getter/setter
+
+
+4. Command 클래스 => 페이징 기법으로 시작번호, 끝번호, 시작블록, 끝블록 구하기 
+
+   (1) 전체 게시물의 수를 구하기 
+
+   (2) 전체 게시물의 수를 가지고 전체 페이지 수를 구하기  
+   
+
+
+
+
+5. db로 ROWNUM만들기
+
+   (1) 오라클
+
+	1) ex_1
+ 
+		SELECT *
+		FROM(
+    			SELECT rownum r_num, a.*
+    			FROM (SELECT * FROM members) a	 =>(1) rownum가 추가된 테이블 만들고
+		) => (2) rownum에 따라 나눈다.
+		WHERE r_num between 1 AND 3;
+
+	2) ex_2
+		select *
+		from(
+			select rownum r_num, a.*
+			from (select * from order by groups desc, lev asc) a 
+		) where r_num between #{begin} and #{end};
+
+
+   (2) 마리아DB
+	
+	1) case 1
+
+		SET @rownum:= [begin];
+       		SELECT @rownum := @rownum + 1 AS no , a.*
+		FROM (SELECT * FROM bbs_t ORDER BY b_idx) a
+		LIMIT [begin], [end] - [begin];
+
+	2) case2
+
+		SELECT * 
+		FROM(
+			SELECT ROW_NUMBER() OVER() AS r_no , a.*
+			FROM (SELECT * FROM bbs_t ORDER BY b_idx) AS a
+		) AS TB
+		WHERE TB.r_no BETWEEN 1 AND 10;
+
+참고 주소: https://gent.tistory.com/254
+
+Oracle에서 rownum
+
+SELECT *
+FROM(
+	SELECT ROW_NUMBER() OVER(ORDER BY ENAME) NUM, A.*		
+	FROM EMP A
+	ORDER BY ENAME	
+)WHERE NUM BETWEEN 7 AND 9;
+
+
+
+MariaDB에서 rownum
+
+SELECT *
+FROM(
+	SELECT * , ROW_NUMBER() OVER() AS ROWNO
+	FROM MYHOME.NOTE
+	WHERE DELETE_AT='N'
+	ORDER BY SN ASC
+)WHERE TB.ROWNO >-1

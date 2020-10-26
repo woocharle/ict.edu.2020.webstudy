@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+	<script>
+		$(function() {
+			$("#p1").click(function() {
+				$("#img").show();
+			});
+			
+			$("#p2").click(function() {
+				$("#img").hide();
+			});
+			
+			$("#p3").click(function() {
+				$("#img2").fadeOut("slow");
+			});
+				
+			$("#p4").click(function() {
+				$("#img2").fadeIn("slow");
+			});
+
+			
+			var i = 1;
+			$("#p5").click(function () {
+				if(i%2==0){
+				   $(this).text("감추기");
+				}else{
+				   $(this).text("보이기");
+				}
+				++i;			
+				$("#img2").fadeToggle("slow");
+			});
+			
+			var j = 1;
+			$("#p6").click(function () {
+				if(i%2==0){
+				   $(this).text("감추기");
+				   $("#img2").fadeTo("slow", 0.9);
+				}else{
+				   $(this).text("보이기");
+				   $("#img2").fadeTo("slow", 0.2);
+				}
+				++j;			
+			});
+			
+		});
+		
+	
+	
+
+		
+		
+	</script>
+</head>
+<body>
+	<h2> hide & show </h2>
+	<p> ex01참고</p>
+	<button id="p1"> 보이기 </button>
+	<button id="p2"> 감추기 </button> <br>
+	<div style="width:200px; height: 200px;">
+		<img id="img" alt="" src="images/pic_bulbon.gif"  >
+	</div>
+	<br><br>
+	<hr>
+	<br><br>
+	
+	<h2> fadeIn & fadeOut </h2>
+	
+	<button id="p3"> 감추기 </button>
+	<button id="p4"> 보이기 </button> <br>
+	<button id="p5"> 감추기 </button>
+	<button id="p6"> 감추기 </button> <br>
+	<div style="width:200px; height: 200px;">
+		<img id="img2" alt="" src="images/pic_bulbon.gif"  >
+	</div>
+	
+	
+	
+	
+	
+</body>
+</html>

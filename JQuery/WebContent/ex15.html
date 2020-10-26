@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>setInterval/marginLeft를 이용한 애니메이션 </title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			var psn = 0;
+			var timer;
+			$("#btn").click(function() {
+				timer = setInterval(() => {
+					psn += 5;
+					$("img").css("marginLeft", psn);		
+				}, 200);
+			});
+			$("img").click(function() {
+				clearInterval(timer);
+			});
+		});
+	
+	</script>
+</head>
+<body>
+	<p>
+		<button id="btn"> 이동 </button>
+		<!-- <button id="btn"> 이동 </button>  -->
+	
+	</p>
+	<div>
+		<img alt="" src="images/image1.gif" >
+	
+	</div>
+	
+</body>
+</html>

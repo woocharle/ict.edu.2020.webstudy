@@ -108,7 +108,8 @@
 	0) 사용법: $([selector]).action();
 
 	1) hide : 해당 selector를 숨겨라.   [Ex01]
-	  
+	   show : 해당 selector를 보여줘라. [Ex01]
+			  
    	   - 문법: $([selector]).hide
 
 	   - ex) 
@@ -118,6 +119,42 @@
 	
            => p 태그를 숨겨라. 
 
+	   - speed 숫자(400=기본값), 문자지정("fast", "slow")
+
 	2) addClass([클래스 이름]): 미리만들어진 클래스 호출   [Ex02]
-	
+
+	3) fadeIn / fadeOut / fadeToggle() 
+	   - 보이기 감추기 
+	  
+           - 투명도 조절가능
+       
+3. 이벤트 (Ex05)
+
+   (1) 마우스 이벤트
+
+	1) click
+
+	2) dblclick
+
+	3) mouseover(mouseenter)
+
+	4) mouseout(mouseleave)
+
+
+   (2) 키보드 이벤트
+
+	1) keypress
+
+	2) keydown
+
+	3) keyup
+  
+   (3) form 이벤트
+
+	1) submit
+
+	2) change
+
+	3) focus
+
 

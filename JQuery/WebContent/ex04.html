@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+	<script type="text/javascript">
+		$(function(){
+			/*
+			$("#p1").click(function(){
+				alert("클릭 성공");
+			});
+			
+			$("#p2").dblclick(function() {
+				alert("클릭 성공");
+			});
+		
+			$("#p3").on("click",function() {
+				alert("클릭 성공");
+			});
+		
+			$("#p4").bind("click",function() {
+				alert("클릭 성공");
+			});
+			
+			$("#p5").mouseover(function() {
+				alert("클릭 성공");
+			});
+			
+			$("#p6").mouseenter("click",function() {
+				alert("클릭 성공");
+			});
+			*/
+			
+			$("#img").mouseover(function() {
+				$(this).attr("src", "images/pic_bulboff.gif");
+			});
+			
+			$("#img").mouseout(function() {
+				$(this).attr("src", "images/pic_bulbon.gif");
+			});
+			
+			$("#name").keyup(function() {
+				var name = $(this).val();
+				alert(name);
+			});
+			
+			$("#chk").change(function() {
+				if($(this).is(":checked")){
+					var str = $("#id").val();
+					$("#id2").val(str);
+				}else{
+					$("#id2").val("");
+				}
+
+				
+			});
+			
+			// 라디오
+			$(":radio").change(function() {
+				if($(this).is(":checked")){  //is(":checked") => 체크박스가 체그상태이냐?
+					var str = $(":checked").val(); 
+					$("#res").val(str); 
+				}
+			});
+		
+			
+			$("#pwck").keyup(function(){
+				if($("#pw").val() == $("#pwck").val()){
+					$("#s1").html("<b>일치합니다.</b>")
+				} else{
+					//$("#pwck").html("<b>일치합니다.</b>")
+					$("#s1").html("<b>일치하지 않습니다.</b>")
+				}
+			});
+			
+			
+		});
+		
+		
+	</script>
+</head>
+<body>
+
+	<p><span id="p1">이벤트 처리</span></p>
+	<p><span id="p2">이벤트 처리</span></p>
+	<p><span id="p3">이벤트 처리</span></p>
+	<p><span id="p4">이벤트 처리</span></p>
+	<p><span id="p5">이벤트 처리</span></p>
+	<p><span id="p6">이벤트 처리</span></p>
+
+	<br><br>
+	<hr>
+	<br><br>
+	
+	<p><span id="p7">이벤트 처리</span></p>
+	<p><img id="img" alt="" src="images/pic_bulbon.gif"></p>
+	<p><input type="text" name="name" id="name"></p>
+	
+	<p><input type="text" name="id" id="id"></p>
+	<p><input type="checkbox" id="chk">상동</p>
+	<p><input type="text" name="id2" id="id2"></p>
+	<hr>
+		<input type="radio" name="fruit" value="orange"> 오랜지
+	<input type="radio" name="fruit" value="apple" > 사과
+	<input type="radio" name="fruit" value="banana"> 바나나
+	<p><input type="text" name="res" id="res"></p>
+	<hr>
+	
+	
+	<p>비밀번호		: <input type="password" name="pwd" id="pw"> </p>
+	<p>비밀번호 확인: <input type="password" name="pwd2" id="pwck"> 
+	<span id="s1"></span>
+	</p>
+
+	
+	
+</body>
+</html>
